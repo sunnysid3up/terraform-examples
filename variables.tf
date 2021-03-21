@@ -1,5 +1,5 @@
 variable "name" {
-  default = "spoonradio"
+  default = "fork"
 }
 
 variable "region" {
@@ -8,5 +8,5 @@ variable "region" {
 
 variable "tags" {
   type = map(string)
-  default = { Name = "spoonradio" }
+  default = { Name = "fork" }
 }

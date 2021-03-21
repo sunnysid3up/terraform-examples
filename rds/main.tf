@@ -8,7 +8,7 @@ module "rds" {
   instance_class    = "db.t2.micro"
   allocated_storage = var.db_allocated_storage
 
-  name = var.db_name
+  name = var.name
   username = var.db_username
   password = var.db_password
   port     = var.db_port
@@ -40,7 +40,5 @@ module "rds" {
     }
   ]
 
-  tags = {
-    Name = var.name
-  }
+  tags = var.tags
 }

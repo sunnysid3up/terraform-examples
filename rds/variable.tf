@@ -24,7 +24,7 @@ variable "database_subnets" {
 
 variable "db_identifier" {
   description = "The name of the RDS instance"
-  default = "spoonradio"
+  default = "fork-mysql"
 }
 
 variable "db_allocated_storage" {

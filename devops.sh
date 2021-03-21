@@ -43,7 +43,7 @@ if [[ $COMMAND = "create" ]]; then
     -t rsa \
     -b 4096 \
     -C "ec2-user@instance" \
-    -f "$HOME/.ssh/spoonradio" \
+    -f "$HOME/.ssh/fork" \
     -N 1q2w3e4r
   echo "Creating..."
   terraform init
@@ -61,8 +61,8 @@ elif [[ $COMMAND = "deploy" ]]; then
   echo "$PRIVATE_IP"
 
   ssh-keyscan -H "BASTION_IP" >> ~/.ssh/known_hosts
-  exit | ssh -i ~/.ssh/spoonradio ec2-user@"$BASTION_IP"
-  ssh -i ~/.ssh/spoonradio ec2-user@"$PRIVATE_IP"
+  exit | ssh -i ~/.ssh/fork ec2-user@"$BASTION_IP"
+  ssh -i ~/.ssh/fork ec2-user@"$PRIVATE_IP"
 
   # Stop app server
   pm2 stop app
