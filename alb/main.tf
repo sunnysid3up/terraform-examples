@@ -1,29 +1,3 @@
-//module "web_alb" {
-//  source = "terraform-aws-modules/alb/aws"
-//
-//  name            = "${var.name}-web-alb"
-//  security_groups = [var.web_sg]
-//  subnets         = var.public_subnets
-//  tags            = var.tags
-//  vpc_id          = var.vpc_id
-//
-//  http_tcp_listeners = [
-//    {
-//      port               = 80
-//      protocol           = "HTTP"
-//      target_group_index = 0
-//    }
-//  ]
-//
-//  target_groups = [
-//    {
-//      name_prefix      = "pref-"
-//      backend_protocol = "HTTP"
-//      backend_port     = 8080
-//      target_type      = "instance"
-//    }
-//  ]
-
 resource "aws_lb" "web_alb" {
   name               = "${var.name}-web-alb"
   internal           = false

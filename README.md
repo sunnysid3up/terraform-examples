@@ -18,3 +18,4 @@ Use Terraform to provision AWS resources.
 2. Open terminal and enter `terraform console`.
 3. Enter `module.alb.web_dns_name` and copy the result.
 4. Open browser and paste the DNS name.
+   You should see `Hello World from IBM Cloud Essentials!`
